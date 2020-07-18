@@ -316,17 +316,18 @@ h4 {
 /*Contacto home */
 
 .imagen-contacto {
-    background-image: url(../assets/encuentra.jpg);
+    background-image: url(../assets/IMPULSA\ TU\ MARCA.jpg);
     height: 40rem;
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
 }
 
 .contenido-contacto {
     flex: 0 0 95%;
-    color: #ffffff;
+    color: #000;
 }
 
 .contenido-contacto p {
@@ -360,6 +361,7 @@ h4 {
 }
 
 .invitado img {
+    background-color: purple;
     filter: gray;
     -webkit-filter: grayscale(1);
     transition: all .5s ease-in-out;
