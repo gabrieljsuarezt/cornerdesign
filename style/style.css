@@ -115,6 +115,15 @@ h4 {
     justify-content: flex-end;
 }
 
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-big {
+    width: calc(33.3% - 1rem);
+}
+
 
 /* Header */
 
@@ -231,11 +240,17 @@ h4 {
 
 /* Anuncios */
 
+.anuncio img {
+    width: 40rem;
+    height: 30rem;
+}
+
 @media (min-width: 768px) {
     .contenedor-anuncios {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        text-align: center;
     }
 }
 
@@ -263,38 +278,20 @@ h4 {
     margin: 0;
 }
 
-.precio {
-    color: #71b100;
-    font-weight: 700;
-    /* El Default es 400 para parrafos, para headings es 700*/
-}
-
-.iconos-caracteristicas {
-    display: flex;
-    list-style: none;
-    /* Le quita el punto o decoración a la lista*/
-    justify-content: space-evenly;
-    padding: 0;
-    max-width: 50rem;
-    flex: 1;
-}
-
-.iconos-caracteristicas li {
-    /*flex: 1;*/
-    display: flex;
-}
-
-.iconos-caracteristicas li img {
-    margin-right: 2rem;
-}
-
 
 /* Iconos Nosotros */
+
+.pt-2 {
+    margin-top: 10rem;
+}
 
 @media (min-width: 768px) {
     .iconos-nosotros {
         display: flex;
         justify-content: space-between;
+    }
+    .icono img {
+        width: 60%;
     }
 }
 
@@ -316,22 +313,35 @@ h4 {
 /*Contacto home */
 
 .imagen-contacto {
-    background-image: url(../assets/IMPULSA\ TU\ MARCA.jpg);
+    position: relative;
     height: 40rem;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
 }
 
+.imagen-contacto::before {
+    content: "";
+    background-image: url(../assets/IMPULSA\ TU\ MARCA.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+}
+
 .contenido-contacto {
+    position: relative;
     flex: 0 0 95%;
     color: #000;
 }
 
 .contenido-contacto p {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 
